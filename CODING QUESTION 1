@@ -1,0 +1,49 @@
+package quiz3;
+import java.util.Scanner;
+public class Exercise1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner (System.in);
+		
+		int e,f;
+		
+		
+		System.out.println("Input the number of the words : ");
+		e= sc.nextInt();
+		
+		String word [] = new String[] {"Hello","World!!!","Hello","Germany!!!","Hello","Berlin!!!"};
+		
+		for( f = 0; f< word.length; f++) {
+            System.out.println(word[f]);
+        }
+        count();
+	}
+
+	private static void count() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void count1() {
+		int a = 1,b,c;
+	
+		String word [] = new String[] {"Hello","World!!!","Hello","Germany!!!","Hello","Berlin!!!"};
+	
+		System.out.println("\nOutput for the number of occurences: ");
+		
+		for(b=0;b<word.length;b++) {
+			
+			for(c=b+1;c<word.length;c++) {   
+				
+				if(word[b].equals(word[c])) {
+					a += 1; 
+					word[c]="0"; 
+            }
+         }
+				if(word[b]!="0")
+					
+		System.out.println(word[b]+", "+a); 
+         a=1;
+         }}}
